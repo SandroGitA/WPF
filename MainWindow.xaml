@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="GridColor" Height="450" Width="450">
     <Grid Name="MainGrid" ShowGridLines="True">
-        <Button Content="Закрыть" HorizontalAlignment="Left" Margin="179,389,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Name="MainButton" Content="Закрыть" HorizontalAlignment="Left" Margin="179,389,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <!--<Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>

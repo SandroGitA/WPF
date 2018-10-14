@@ -33,6 +33,8 @@ namespace WpfApp1
             /*RowDefinition rd = new RowDefinition();
             ColumnDefinition cd = new ColumnDefinition();*/
 
+            MainButton.Background = Brushes.Black;
+
             for (int i = 0; i < 5; i++)
             {
                 RowDefinition rd = new RowDefinition();
@@ -41,6 +43,8 @@ namespace WpfApp1
                 MainGrid.RowDefinitions.Add(rd);
                 MainGrid.ColumnDefinitions.Add(cd);
             }
+
+            MainGrid.Background = Brushes.Green;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
