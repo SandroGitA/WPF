@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Globalization;
 
 namespace WpfApp1
 {
@@ -24,31 +25,41 @@ namespace WpfApp1
         {
             InitializeComponent();
 
-            /*tBox textBox = new TextBox();
-            textBox.Text = "Hello";
-            MainGrid.Children.Add(textBox);*/
-
-            //List<RowDefinition> rd = new List<RowDefinition>();
-
-            /*RowDefinition rd = new RowDefinition();
-            ColumnDefinition cd = new ColumnDefinition();*/
-
-            MainButton.Background = Brushes.Black;
-            MainGrid.Background = Brushes.Green;
-
-            for (int i = 0; i < 5; i++)
+            for(int i = 0; i < 5; i++)
             {
                 RowDefinition rd = new RowDefinition();
                 ColumnDefinition cd = new ColumnDefinition();
 
                 MainGrid.RowDefinitions.Add(rd);
                 MainGrid.ColumnDefinitions.Add(cd);
+
+                Rectangle rectangle = new Rectangle();
+                rectangle.Fill = Brushes.Red;
+
+                SolidColorBrush brush = new SolidColorBrush();
+                
+
+                Grid.SetColumn(rectangle,2);
+                Grid.SetRow(rectangle,3);
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+    }
+
+    class ColorConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return new SolidColorBrush(Colors.Blue);
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new Exception("The method or operation is not implemented.");
         }
     }
 }
