@@ -24,6 +24,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            MainGrid.ShowGridLines = true;
 
             for(int i = 0; i < 5; i++)
             {
@@ -36,11 +37,9 @@ namespace WpfApp1
                 Rectangle rectangle = new Rectangle();
                 rectangle.Fill = Brushes.Red;
 
-                SolidColorBrush brush = new SolidColorBrush();
-                
-
-                Grid.SetColumn(rectangle,2);
-                Grid.SetRow(rectangle,3);
+                MainGrid.Children.Add(rectangle);
+                Grid.SetColumn(rectangle,i);
+                Grid.SetRow(rectangle,0);
             }
         }
 
@@ -50,7 +49,7 @@ namespace WpfApp1
         }
     }
 
-    class ColorConverter : IValueConverter
+    /*class ColorConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -61,5 +60,5 @@ namespace WpfApp1
         {
             throw new Exception("The method or operation is not implemented.");
         }
-    }
+    }*/
 }
