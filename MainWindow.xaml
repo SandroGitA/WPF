@@ -6,9 +6,11 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="GridColor" Height="450" Width="450">
+    
     <!--<Window.Resources>
         <SolidColorBrush x:Key="Color" Color="Green"></SolidColorBrush>
     </Window.Resources>-->
+    
     <Grid Name="MainGrid">
         <!--<Grid.RowDefinitions>
             <RowDefinition></RowDefinition>

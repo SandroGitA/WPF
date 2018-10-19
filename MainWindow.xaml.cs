@@ -26,7 +26,7 @@ namespace WpfApp1
             InitializeComponent();
             MainGrid.ShowGridLines = true;
 
-            for(int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 RowDefinition rd = new RowDefinition();
                 ColumnDefinition cd = new ColumnDefinition();
@@ -39,7 +39,7 @@ namespace WpfApp1
 
                 MainGrid.Children.Add(rectangle);
                 Grid.SetColumn(rectangle,i);
-                Grid.SetRow(rectangle,0);
+                Grid.SetRow(rectangle,i);
             }
         }
 
@@ -48,17 +48,4 @@ namespace WpfApp1
             Close();
         }
     }
-
-    /*class ColorConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return new SolidColorBrush(Colors.Blue);
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new Exception("The method or operation is not implemented.");
-        }
-    }*/
 }
